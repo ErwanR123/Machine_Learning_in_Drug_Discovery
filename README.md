@@ -36,29 +36,21 @@ source .venv/bin/activate  # Linux / macOS
 
 ### 2. Installer les dépendances
 
+Installer PyTorch selon votre configuration :
+
 ```bash
 pip install torch --index-url https://download.pytorch.org/whl/cu118  # GPU (CUDA 11.8)
 # ou
 pip install torch  # CPU uniquement
-
-pip install fair-esm==2.0.0
-pip install numpy pandas matplotlib requests py3Dmol scikit-learn
-pip install ipykernel jupyter
 ```
 
-Versions testées :
+Puis installer le reste des dépendances via `requirements.txt` :
 
-| Package | Version |
-|---|---|
-| torch | 2.11.0+cu130 |
-| fair-esm | 2.0.0 |
-| numpy | 2.2.6 |
-| pandas | 2.3.3 |
-| matplotlib | 3.10.8 |
-| requests | 2.33.1 |
-| py3Dmol | 2.5.4 |
-| scikit-learn | 1.7.2 |
-| ipykernel | 7.2.0 |
+```bash
+pip install -r requirements.txt
+```
+
+> Les versions exactes sont épinglées dans `requirements.txt`.
 
 ### 3. Enregistrer le kernel Jupyter
 
